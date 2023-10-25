@@ -11,6 +11,19 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    while True:
+        print("Menu")
+        print("-" * 13)
+        print("1. Encode")
+        print("2. Decode")
+        print("3. Quit")
+        option = int(input("Please enter an option: "))
+        password = ''
+        if option == 1:
+            password = input("Please enter your password to encode: ")
+        elif option == 2:
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        elif option == 3:
+            break
+
+
