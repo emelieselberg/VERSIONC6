@@ -10,6 +10,14 @@ def print_hi(name):
 
 
 # Press the green button in the gutter to run the script.
+
+def encoder(password):
+    encoded_password = ''
+    for char in password:
+        encoded_password += str(int(char) + 3)
+
+    return encoded_password
+
 if __name__ == '__main__':
     while True:
         print("Menu")
@@ -21,9 +29,11 @@ if __name__ == '__main__':
         password = ''
         if option == 1:
             password = input("Please enter your password to encode: ")
+            print(encoder(password))
         elif option == 2:
-
+            print("ignore this")
         elif option == 3:
             break
+
 
 
