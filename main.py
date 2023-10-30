@@ -1,15 +1,4 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+# Emelie Selberg
 
 def encoder(password):
     encoded_password = ''
@@ -18,22 +7,29 @@ def encoder(password):
 
     return encoded_password
 
+def decoder(password):
+    decoded = ""
+    for i in password:
+        decoded += str((int(i) - 3))
+
+    return decoded
+
 if __name__ == '__main__':
+    password = ''
     while True:
         print("Menu")
         print("-" * 13)
         print("1. Encode")
         print("2. Decode")
-        print("3. Quit")
+        print("3. Quit\n")
         option = int(input("Please enter an option: "))
-        password = ''
+
         if option == 1:
             password = input("Please enter your password to encode: ")
-            print(encoder(password))
+            password = encoder(password)
+            print("Your password has been encoded and stored!\n")
         elif option == 2:
-            print("ignore this")
+            print("The encoded password is " + password + ", and the original password is " + decoder(password) + ".\n")
         elif option == 3:
             break
-
-
 
